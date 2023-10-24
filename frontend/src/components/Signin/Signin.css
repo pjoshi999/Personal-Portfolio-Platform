@@ -1,0 +1,52 @@
+/* App.css */
+/* App.css */
+.login-form {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  width: 500px; /* Set the width to match the sign-up form */
+  margin: 0 auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Rest of the CSS remains the same */
+
+.login-form h2 {
+  color: #0c3e74;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  margin: 20px;
+  text-align: left;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.input-container input:hover {
+  border: 1px solid #007bff;
+}
+
+.submit {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background: #0056b3;
+}
+
+/* You can add more styles as needed */
