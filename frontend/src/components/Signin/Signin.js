@@ -3,17 +3,26 @@ import "./Signin.css";
 
 function Signin() {
   return (
-    <div className="login-form">
-      <h2>Sign In</h2>
+    <div className="container">
+      <h1>Signin</h1>
       <form>
-        <div className="input-container">
-          <input type="text" placeholder="User ID" />
+        <div className="col-1">
+          <label htmlFor="userid">UserId:</label>
+          <input type="text" name="userid" id="userid" />
         </div>
-        <div className="input-container">
-          <input type="password" placeholder="Password" />
+        <div className="col-1">
+          <label htmlFor="password">Enter Password:</label>
+          <input type="password" name="password" id="password" />
         </div>
-        <button type="submit" className="submit">Sign In</button>
+        <div className="col-2">
+          <button type="submit">Log in</button>
+        </div>
       </form>
+      <div className="col-3">
+        <a href="Forgetpass.js">Forgot Passwort</a>
+        <br />
+        <a href="Signup.js">Create Account</a>
+      </div>
     </div>
   );
 }

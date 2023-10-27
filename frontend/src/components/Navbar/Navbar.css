@@ -1,0 +1,65 @@
+body, ul, li, a {
+    margin: 0;
+    padding-left: 30px;
+    list-style: none;
+    text-decoration: none;
+    font-size: 15px;
+    text-align: center;
+    align-items: center;
+}
+
+/* Basic styles for the navigation bar */
+nav {
+    background-color:rgb(13, 71, 161);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px; /* Increased horizontal padding */
+}
+.nav-links {
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 30px; 
+}
+
+.nav-links a {
+    color: #fff;
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.line {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0; /* Increased vertical margin */
+}
+
+/* Media query for mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        z-index: 1;
+        padding: 1rem 0; /* Increased vertical padding */
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: flex;
+    }
+}

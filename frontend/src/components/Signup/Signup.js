@@ -1,102 +1,57 @@
-import React, { useState } from "react";
-import "./Signup.css";
+import React from 'react'
+import "./Signup.css"
 
 const Signup = () => {
-  const [name, setName] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [address, setAddress] = useState("");
-  const [gender, setGender] = useState("Male");
-  const [dob, setDob] = useState("");
-  const [userId, setUserId] = useState("");
-  const [password, setPassword] = useState("");
-  const details = { name, phoneNumber, address, gender, dob, userId, password };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Add your form submission logic here
-    console.log("Form Submitted:", details);
-  };
   return (
-    <div className="signup-container">
-      <form className="signup-form" onSubmit={handleSubmit}>
-        <h2>Sign Up</h2>
-        <div className="form-group">
-          <input
-            type="text"
-            name="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            placeholder="Full Name"
-            required
-          />
+    <>
+    <div className="container">
+        <h1>SignUp</h1>
+      <form>
+        <div className="col-1">
+          <label htmlFor="name">Enter Full Name:</label>
+          <input type="text" id='name'/>
         </div>
-        <div className="form-group">
-          <input
-            type="tel"
-            name="phoneNumber"
-            value={phoneNumber}
-            onChange={(e) => setPhoneNumber(e.target.value)}
-            placeholder="Phone Number"
-            required
-          />
+        <div className="col-1">
+          <label htmlFor="email">Enter Email id:</label>
+          <input type="email" id='email'/>
         </div>
-        <div className="form-group">
-          <input
-            type="text"
-            name="address"
-            value={address}
-            onChange={(e) => setAddress(e.target.value)}
-            placeholder="Address"
-            required
-          />
+        <div className="col-1">
+          <label htmlFor="mobile">Enter Mobile No:</label>
+          <input type="text" id='mobile'/>
         </div>
-        <div className="form-group">
-          <select
-            name="gender"
-            value={gender}
-            onChange={(e) => setGender(e.target.value)}
-          >
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-          </select>
+        <div className="col-1">
+        <label htmlFor="gender">Gender:</label>
+            <input type="radio" id="gender" name="gender" value="Male" /> Male
+            <input type="radio" id="gender" name="gender" value="Female" /> Female
+            <input type="radio" id="gender" name="gender" value="Other" /> Other
         </div>
-        <div className="form-group">
-          <input
-            type="date"
-            name="dob"
-            value={dob}
-            onChange={(e) => setDob(e.target.value)}
-            placeholder="Date of Birth"
-            required
-          />
+        <div className="col-1">
+          <label htmlFor="dateofbirth">Enter Date of Birth:</label>
+          <input type="date" id='dateofbirth'/>
         </div>
-        <div className="form-group">
-          <input
-            type="text"
-            name="userId"
-            value={userId}
-            onChange={(e) => setUserId(e.target.value)}
-            placeholder="User ID"
-            required
-          />
+        <div className="col-1">
+          <label htmlFor="address">Address:</label>
+          <input type="text" id='address'/>
         </div>
-        <div className="form-group">
-          <input
-            type="password"
-            name="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Password"
-            required
-          />
+        <div className="col-1">
+          <label htmlFor="userid">Create UserId:</label>
+          <input type="text" name="userid" id="userid" />
         </div>
-        <button type="submit" className="submit">
-          Create Account
-        </button>
+        <div className="col-1">
+          <label htmlFor="password">Enter Password:</label>
+          <input type="password" name="password" id="password" />
+        </div>
+        <div className="col-1">
+          <label htmlFor="cpassword">Confirm Password:</label>
+          <input type="password" name="cpassword" id="cpassword" />
+        </div>
+        <div className="col-2">
+            <button type='submit'>Create Account</button>
+        </div>
       </form>
     </div>
-  );
-};
+    </>
+  )
+}
 
-export default Signup;
+export default Signup
